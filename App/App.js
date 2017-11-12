@@ -5,6 +5,7 @@ import { TabNavigator } from 'react-navigation';
 import HomeScreen from "./screens/Home";
 import LikedCollectionsScreen from "./screens/LikedCollections";
 import ProfileScreen from "./screens/Profile";
+import YourCollectionsScreen from "./screens/YourCollections";
 
 export default GeneralNavigator = TabNavigator({
 
@@ -21,7 +22,10 @@ export default GeneralNavigator = TabNavigator({
     screen: LikedCollectionsScreen,
   },
 
-  
+  YourCollections: {
+    screen: YourCollectionsScreen,
+  },
+
 
 }, {
   tabBarPosition: 'top',
