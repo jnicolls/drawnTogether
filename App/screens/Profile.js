@@ -8,6 +8,7 @@ export default class ProfileScreen extends React.Component {
     tabBarLabel: 'Profile',
   };
   render() {
+    const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
         <Text> This is the profile screen. </Text>
