@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import { Header } from 'react-native-elements';
 import styles from "../config/styles";
-import Title from "../components/Title"
+import SearchBar from "../components/SearchBar"
 
 
 export default class HomeScreen extends React.Component {
@@ -15,7 +15,7 @@ export default class HomeScreen extends React.Component {
     return (    
 
       <View style={styles.container}>
-        
+        <SearchBar />
         <Text > This is the home screen. </Text>
       </View>
     );
