@@ -51,7 +51,7 @@ export default GeneralNavigator = StackNavigator({
 
   SearchResults:{
     screen: SearchResultsScreen,
-  }
+  },
 
   Collection:{
     screen: CollectionScreen

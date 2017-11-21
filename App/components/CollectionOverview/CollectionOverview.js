@@ -13,14 +13,12 @@ export default class SearchBar extends React.Component{
 
     return (
       <View>
-			<Text>
-				style={{height: 80}}
-				title="This is the collection for {this.props.collectionTitle}"
-				onChangeText={(text) => this.setState({text})}
-				onSubmitEditing={() =>
-					this.props.navigation.navigate('Collection', {collectionTitle: this.props.collectionTitle })
-				}
-			<Text/>
+			<Button
+        onPress={() =>
+          this.props.navigation.navigate('Collection', {collectionTitle: this.props.collectionTitle })
+        }
+				title={this.props.collectionTitle}
+			/>
       </View>
     );
 	}
