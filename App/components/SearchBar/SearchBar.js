@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppRegistry, Text, TextInput, View } from 'react-native';
+import {Text, TextInput, View } from 'react-native';
 
 
 export default class SearchBar extends React.Component{

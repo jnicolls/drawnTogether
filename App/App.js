@@ -1,11 +1,13 @@
 
 import React from 'react';
 import { View, Text } from 'react-native';
-import { StackNavigator, TabNavigator } from 'react-navigation';
+import { StackNavigator, TabNavigator, AppRegistry } from 'react-navigation';
 import HomeScreen from "./screens/Home";
 import LikedCollectionsScreen from "./screens/LikedCollections";
 import ProfileScreen from "./screens/Profile";
 import YourCollectionsScreen from "./screens/YourCollections";
+import SearchResultsScreen from "./screens/SearchResults"
+import CollectionScreen from "./screens/Collection"
 import { Header } from 'react-native-elements';
 
 export default GeneralNavigator = StackNavigator({
@@ -22,7 +24,7 @@ export default GeneralNavigator = StackNavigator({
 		    screen: ProfileScreen,
 		  },
 
-		  
+
 		  LikedCollections: {
 		    screen: LikedCollectionsScreen,
 		  },
@@ -40,7 +42,19 @@ export default GeneralNavigator = StackNavigator({
 		  },
 		}),
 
-  		navigationOptions:{title:"DrawnTogether"}
- 
- 	 }
+
+    navigationOptions:{title:"DrawnTogether"},
+
+
+
+  },
+
+  SearchResults:{
+    screen: SearchResultsScreen,
+  },
+
+  Collection:{
+    screen: CollectionScreen
+  }
+
 });
