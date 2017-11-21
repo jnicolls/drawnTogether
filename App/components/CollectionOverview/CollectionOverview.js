@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Text, TextInput, View } from 'react-native';
+import {Text, Button, View } from 'react-native';
 
 
 export default class SearchBar extends React.Component{
@@ -12,15 +12,15 @@ export default class SearchBar extends React.Component{
   render() {
 
     return (
-      <View style={{padding: 10}}>
-			<TextInput
-				style={{height: 40}}
-				placeholder="Search for Collections, Curators, etc."
+      <View>
+			<Text>
+				style={{height: 80}}
+				title="This is the collection for {this.props.collectionTitle}"
 				onChangeText={(text) => this.setState({text})}
 				onSubmitEditing={() =>
-					this.props.navigation.navigate('SearchResults', {searchQuery: this.state.text })
+					this.props.navigation.navigate('Collection', {collectionTitle: this.props.collectionTitle })
 				}
-			/>
+			<Text/>
       </View>
     );
 	}

@@ -7,7 +7,6 @@ export default class SearchResultsScreen extends React.Component {
     title: 'Search Results',
   };
 
-
   render() {
 
     const{navigate} = this.props.navigation
@@ -16,8 +15,5 @@ export default class SearchResultsScreen extends React.Component {
         <Text> These are the search results for {this.props.navigation.state.params.searchQuery} </Text>
       </View>
     );
-
   }
-
-
 }
