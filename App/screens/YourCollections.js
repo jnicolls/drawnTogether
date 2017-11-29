@@ -10,17 +10,15 @@ export default class YourCollectionsScreen extends React.Component {
   };
   render() {
     const { navigate } = this.props.navigation;
+    const { navigation, screenProps } = this.props
     return (
       <View style={styles.container}>
-        <Text>
-        console.log("the database in your_collections is")
-        console.log({this.props.navigation.params.db})
-        </Text>
+
         <Text> This is the 'Your collections' screen. </Text>
         <GeneralButton
           buttonTitle="Make your own collection"
           destination="MakeCollection"
-          db={this.props.db}
+          db={screenProps.firebaseDatabase}
           navigation={this.props.navigation}
         />
       </View>

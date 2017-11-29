@@ -7,11 +7,26 @@ export default class MakeCollectionScreen extends React.Component {
 
   constructor(props) {
     super(props);
+    console.log(props)
     this.state = {
       title: '____',
       images: [],
       texts: [],
     };
+
+  }
+
+  _onSubmit(title, images) {
+       let collectionPath = "/collections/" + title;
+       console.log()
+       console.log("the database is")
+       console.log(this.props.screenProps.firebaseDatabase.toString())
+       console.log(collectionPath)
+       console.log(images)
+
+       this.props.screenProps.firebaseDatabase.ref(collectionPath).set({
+           images: images
+       })
   }
 
   render() {
@@ -31,6 +46,7 @@ export default class MakeCollectionScreen extends React.Component {
           }
       />
 
+
       <Text>
           The title for this collection is {this.state.title}
       </Text>
@@ -44,23 +60,12 @@ export default class MakeCollectionScreen extends React.Component {
 
       <Button
         title="Submit Collection"
-        onPress={this._onSubmit(this.state.title, this.state.images, this.props.db)}
+        onPress={this._onSubmit(this.state.title, this.state.images)}
       />
 
       </View>
     );
   }
 
-  _onSubmit(title, images, db) {
-       let collectionPath = "/collections/" + title;
 
-       console.log("the database is")
-       console.log(db)
-       console.log(collectionPath)
-       console.log(images)
-
-       return db.database().ref(collectionPath).set({
-           images: images
-       })
-  }
 }
