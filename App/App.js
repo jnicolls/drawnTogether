@@ -13,21 +13,7 @@ import { Header } from 'react-native-elements';
 import firebase from 'firebase'; // 4.3.1
 
 
-const config = {
-  apiKey: "AIzaSyBWgYtEL1UkTJua2YKW40Za8EQMtC9sO3I",
-  authDomain: "drawnt-b43c0.firebaseapp.com",
-  databaseURL: "https://drawnt-b43c0.firebaseio.com",
-  projectId: "drawnt-b43c0",
-  storageBucket: "drawnt-b43c0.appspot.com",
-  messagingSenderId: "566894357868"
-};
 
-try {
-  const firebaseApp = firebase.initializeApp(config);
-  console.log('Firebase loaded');
-} catch (e) {
-  console.log('App reloaded, so firebase did not re-initialize');
-}
 
 const GeneralNavigator  = StackNavigator({
 

@@ -60,7 +60,12 @@ export default class MakeCollectionScreen extends React.Component {
 
       <Button
         title="Submit Collection"
-        onPress={this._onSubmit(this.state.title, this.state.images)}
+        onPress={() => {
+          collectionPath = "/collections/" + this.state.title;
+          this.props.screenProps.firebaseDatabase.ref(collectionPath).set({
+              images: this.state.images
+          })
+        }}
       />
 
       </View>
