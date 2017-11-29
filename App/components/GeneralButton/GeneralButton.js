@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Text, Button, View } from 'react-native';
 
 
-export default class CollectionOverview extends React.Component{
+export default class GeneralButton extends React.Component{
 
 	constructor(props) {
     super(props);
@@ -14,9 +14,9 @@ export default class CollectionOverview extends React.Component{
       <View>
 			<Button
         onPress={() =>
-          this.props.navigation.navigate('Collection', {collectionTitle: this.props.collectionTitle })
+          this.props.navigation.navigate(this.props.destination)
         }
-				title={this.props.collectionTitle}
+				title={this.props.buttonTitle}
 			/>
       </View>
     );
