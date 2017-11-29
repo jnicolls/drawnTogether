@@ -9,6 +9,7 @@ import YourCollectionsScreen from "./screens/YourCollections";
 import MakeCollectionScreen from "./screens/MakeCollection"
 import SearchResultsScreen from "./screens/SearchResults"
 import CollectionScreen from "./screens/Collection"
+import IndividualImageScreen from "./screens/IndividualImage"
 import { Header } from 'react-native-elements';
 import firebase from 'firebase'; // 4.3.1
 
@@ -66,6 +67,10 @@ const GeneralNavigator  = StackNavigator({
   MakeCollection:{
     screen: MakeCollectionScreen,
   },
+
+  IndividualImage:{
+    screen: IndividualImageScreen
+  }
 
 });
 
