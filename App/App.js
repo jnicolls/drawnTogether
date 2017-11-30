@@ -8,6 +8,7 @@ import ProfileScreen from "./screens/Profile";
 import YourCollectionsScreen from "./screens/YourCollections";
 import SearchResultsScreen from "./screens/SearchResults"
 import CollectionScreen from "./screens/Collection"
+import ExpandedInfoScreen from "./screens/ExpandedInfo";
 import { Header } from 'react-native-elements';
 
 export default GeneralNavigator = StackNavigator({
@@ -55,6 +56,12 @@ export default GeneralNavigator = StackNavigator({
 
   Collection:{
     screen: CollectionScreen
-  }
+  },
+
+	ExpandedInfo:{
+  		screen:ExpandedInfoScreen
+	}
+
+
 
 });
