@@ -35,6 +35,22 @@ export default styles = StyleSheet.create({
         marginBottom: 10,
         marginLeft: 10
     },
+    detailTop: {
+        color: 'white',
+        fontSize: 16,
+        marginTop: 10,
+        marginBottom: 5,
+        marginLeft: 10,
+    },
+    detailBottom: {
+        color: 'white',
+        fontSize: 16,
+        marginTop: 5,
+        marginBottom: 10,
+        marginRight: 10,
+        textAlign: 'right',
+        textDecoration: 'underline'
+    },
     margin: {
         margin: 20
     },
@@ -53,5 +69,10 @@ export default styles = StyleSheet.create({
         padding: 10,
         fontSize: 18
     },
+    image: {
+        flex: 1,
+        alignSelf: 'stretch',
+        height: win.height,
+    }
 
 });

@@ -10,6 +10,7 @@ import MakeCollectionScreen from "./screens/MakeCollection"
 import SearchResultsScreen from "./screens/SearchResults"
 import CollectionScreen from "./screens/Collection"
 import ExpandedInfoScreen from "./screens/ExpandedInfo";
+import FullscreenImageScreen from "./screens/FullscreenImage";
 import { Header } from 'react-native-elements';
 import firebase from 'firebase'; // 4.3.1
 
@@ -68,6 +69,10 @@ const GeneralNavigator  = StackNavigator({
   		screen:ExpandedInfoScreen
 	},
 
+    FullscreenImage:{
+  	    screen: FullscreenImageScreen
+    },
+
   MakeCollection:{
     screen: MakeCollectionScreen,
   },
@@ -75,6 +80,10 @@ const GeneralNavigator  = StackNavigator({
 });
 
 export default class DrawnTogether extends React.Component {
+    constructor(props) {
+        super(props);
+        console.log(this.props.navigation);
+    }
   render(){
     const config = {
       apiKey: "AIzaSyBWgYtEL1UkTJua2YKW40Za8EQMtC9sO3I",
