@@ -7,7 +7,6 @@ export default class MakeCollectionScreen extends React.Component {
 
   constructor(props) {
     super(props);
-    console.log(props)
     this.state = {
       title: '____',
       images: [],
@@ -16,18 +15,7 @@ export default class MakeCollectionScreen extends React.Component {
 
   }
 
-  _onSubmit(title, images) {
-       let collectionPath = "/collections/" + title;
-       console.log()
-       console.log("the database is")
-       console.log(this.props.screenProps.firebaseDatabase.toString())
-       console.log(collectionPath)
-       console.log(images)
 
-       this.props.screenProps.firebaseDatabase.ref(collectionPath).set({
-           images: images
-       })
-  }
 
   render() {
     const { navigate } = this.props.navigation;

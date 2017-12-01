@@ -72,6 +72,22 @@ const GeneralNavigator  = StackNavigator({
     screen: MakeCollectionScreen,
   },
 
+  IndividualImage:{
+    screen: IndividualImageScreen
+  },
+
+  Login:{
+    screen: LoginScreen
+  },
+
+  CreateUser:{
+    screen:CreateUserScreen
+  },
+
+  ProfileEditor:{
+    screen:ProfileEditingScreen
+  },
+
 });
 
 export default class DrawnTogether extends React.Component {
@@ -95,7 +111,11 @@ export default class DrawnTogether extends React.Component {
     return (
       <GeneralNavigator
         screenProps={
-          {firebaseDatabase: firebase.database()}
+          {
+            firebaseDatabase: firebase.database(),
+            firebaseApp: firebase.app(),
+            user: []
+          }
         }
       />
     )
