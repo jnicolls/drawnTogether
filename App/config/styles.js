@@ -6,7 +6,7 @@ const win = Dimensions.get('window');
 export default styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: "#ffc1c1",
         alignItems: 'center',
     },
     title: {

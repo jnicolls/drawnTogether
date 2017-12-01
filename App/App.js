@@ -11,6 +11,10 @@ import SearchResultsScreen from "./screens/SearchResults"
 import CollectionScreen from "./screens/Collection"
 import ExpandedInfoScreen from "./screens/ExpandedInfo";
 import FullscreenImageScreen from "./screens/FullscreenImage";
+import IndividualImageScreen from "./screens/IndividualImage"
+import LoginScreen from "./screens/Login"
+import CreateUserScreen from "./screens/CreateUser"
+import ProfileEditingScreen from "./screens/ProfileEditing"
 import { Header } from 'react-native-elements';
 import firebase from 'firebase'; // 4.3.1
 
@@ -77,6 +81,22 @@ const GeneralNavigator  = StackNavigator({
     screen: MakeCollectionScreen,
   },
 
+  IndividualImage:{
+    screen: IndividualImageScreen
+  },
+
+  Login:{
+    screen: LoginScreen
+  },
+
+  CreateUser:{
+    screen:CreateUserScreen
+  },
+
+  ProfileEditor:{
+    screen:ProfileEditingScreen
+  },
+
 });
 
 export default class DrawnTogether extends React.Component {
@@ -104,8 +124,13 @@ export default class DrawnTogether extends React.Component {
     return (
       <GeneralNavigator
         screenProps={
-          {firebaseDatabase: firebase.database()}
+          {
+            firebaseDatabase: firebase.database(),
+            firebaseApp: firebase.app(),
+            user: []
+          }
         }
+        backgroundColor="#ffc1c1"
       />
     )
   }

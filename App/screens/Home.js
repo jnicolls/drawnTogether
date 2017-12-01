@@ -1,11 +1,15 @@
 import React from 'react';
-import {StyleSheet, Text, TextInput, View} from 'react-native';
-import { Header } from 'react-native-elements';
+import {StyleSheet, Text, TextInput, View,ScrollView, Dimensions} from 'react-native';
+import { Header, Button } from 'react-native-elements';
 import styles from "../config/styles";
 import SearchBar from "../components/SearchBar"
 import CollectionOverview from "../components/CollectionOverview"
 
+const win = Dimensions.get('window');
+
 export default class HomeScreen extends React.Component {
+
+
 
   render() {
 
@@ -13,19 +17,56 @@ export default class HomeScreen extends React.Component {
 
       <View style={styles.container}>
         <SearchBar navigation={this.props.navigation} />
-        <CollectionOverview
-          collectionTitle="Collection 1"
-          navigation={this.props.navigation}
-        />
-        <CollectionOverview
-          collectionTitle="Collection 2"
-          navigation={this.props.navigation}
-        />
-        <CollectionOverview
-          collectionTitle="Collection 3"
-          navigation={this.props.navigation}
-        />
-        <Text > This is the home screen </Text>
+        <ScrollView>
+        <Button
+  				backgroundColor="#00ADDC"
+          font="avenir"
+  				buttonStyle = {
+  					{
+  						flex:1,
+              justifyContent:'center',
+  						alignSelf:"center",
+              margin: 20
+  					}
+  				}
+          onPress={() =>
+            this.props.navigation.navigate('Collection', {collectionTitle: "Rejecting Anatomy" })
+          }
+  				title={"Rejecting Anatomy"}
+  			/>
+        <Button
+  				backgroundColor="#00ADDC"
+          font="avenir"
+  				buttonStyle = {
+  					{
+  						flex:1,
+              justifyContent:'center',
+  						alignSelf:"center",
+              margin: 20
+  					}
+  				}
+          onPress={() =>
+            this.props.navigation.navigate('Collection', {collectionTitle: "Rejecting Anatomy" })
+          }
+  				title={"Rejecting Anatomy Revelations"}
+  			/>
+        <Button
+  				backgroundColor="#00ADDC"
+          font="avenir"
+  				buttonStyle = {
+  					{
+  						flex:1,
+              justifyContent:'center',
+  						alignSelf:"center",
+              margin: 20,
+  					}
+  				}
+          onPress={() =>
+            this.props.navigation.navigate('Collection', {collectionTitle: "Rejecting Anatomy" })
+          }
+  				title={"Rejecting Anatomy Another One"}
+  			/>
+      </ScrollView>
       </View>
     );
   }
