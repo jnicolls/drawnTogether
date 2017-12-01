@@ -74,7 +74,7 @@ export default class LoginScreen extends React.Component{
                     })
                     .catch((error) => {
                         this.setState({ error: 'Authentication failed.', loading: false });
-                        Alert.alert("You have failed to create an account, please try again.")
+                        Alert.alert("You have failed to login to an account, please try again.")
                     });
                 });
             }
