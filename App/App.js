@@ -48,13 +48,14 @@ const GeneralNavigator  = StackNavigator({
 		}, {
 		  tabBarPosition: 'top',
 		  animationEnabled: true,
+      barTintColor: "#fb5858",
 		  tabBarOptions: {
 		    activeTintColor: '#e91e63',
 		  },
 		}),
 
 
-    navigationOptions:{title:"DrawnTogether"},
+    navigationOptions:{title:"DrawnTogether", tintColor:"blue"},
 
 
 
@@ -121,7 +122,6 @@ export default class DrawnTogether extends React.Component {
             user: []
           }
         }
-        backgroundColor="#ffc1c1"
       />
     )
   }
