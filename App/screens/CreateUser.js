@@ -47,7 +47,7 @@ export default class CreateUserScreen extends React.Component{
                 this.props.screenProps.firebaseApp.auth().createUserWithEmailAndPassword(email, password)
                     .then(() => {
                       this.setState({ error: '', loading: false });
-                      
+
                       user = this.props.screenProps.firebaseApp.auth().currentUser
                       Alert.alert("Current user is " + user.email)
                       user.updateProfile({
@@ -60,8 +60,6 @@ export default class CreateUserScreen extends React.Component{
                       this.props.navigation.navigate(ProfileEditings)
                     })
                     .catch((error) => {
-                        this.setState({ error: 'Authentication failed.', loading: false });
-                        Alert.alert("You have failed to create an account, please try again.")
                     })
             }
 
