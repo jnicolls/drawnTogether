@@ -10,6 +10,10 @@ import MakeCollectionScreen from "./screens/MakeCollection"
 import SearchResultsScreen from "./screens/SearchResults"
 import CollectionScreen from "./screens/Collection"
 import ExpandedInfoScreen from "./screens/ExpandedInfo";
+import IndividualImageScreen from "./screens/IndividualImage"
+import LoginScreen from "./screens/Login"
+import CreateUserScreen from "./screens/CreateUser"
+import ProfileEditingScreen from "./screens/ProfileEditing"
 import { Header } from 'react-native-elements';
 import firebase from 'firebase'; // 4.3.1
 
@@ -117,6 +121,7 @@ export default class DrawnTogether extends React.Component {
             user: []
           }
         }
+        backgroundColor="#ffc1c1"
       />
     )
   }
