@@ -26,7 +26,7 @@ export default class HomeScreen extends React.Component {
   						flex:1,
               justifyContent:'center',
   						alignSelf:"center",
-              margin: 20
+              margin: 10
   					}
   				}
           onPress={() =>
@@ -42,7 +42,7 @@ export default class HomeScreen extends React.Component {
   						flex:1,
               justifyContent:'center',
   						alignSelf:"center",
-              margin: 20
+              margin: 10
   					}
   				}
           onPress={() =>
@@ -58,7 +58,7 @@ export default class HomeScreen extends React.Component {
   						flex:1,
               justifyContent:'center',
   						alignSelf:"center",
-              margin: 20,
+              margin: 10,
   					}
   				}
           onPress={() =>

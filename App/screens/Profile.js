@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View, AsyncStorage} from 'react-native';
+import {Button} from "react-native-elements"
 import styles from "../config/styles.js";
 import GeneralButton from "../components/GeneralButton"
 
@@ -29,26 +30,66 @@ export default class ProfileScreen extends React.Component {
     return (
 
       <View style={styles.container}>
-        <GeneralButton
-          buttonTitle="Make your own collection"
-          destination="MakeCollection"
-          navigation={this.props.navigation}
-        />
-        <GeneralButton
-          buttonTitle="Login"
-          destination="Login"
-          navigation={this.props.navigation}
-        />
-        <GeneralButton
-          buttonTitle="Create A New Profile"
-          destination="CreateUser"
-          navigation={this.props.navigation}
-        />
-        <GeneralButton
-        buttonTitle="Make changes to current profile."
-        destination="ProfileEditor"
-        navigation={this.props.navigation}
-        />
+      <Button
+        backgroundColor="#00ADDC"
+        font="avenir"
+        buttonStyle = {
+          {
+            justifyContent:'center',
+            alignSelf:"center",
+            margin: 10
+          }
+        }
+        onPress={() =>
+          this.props.navigation.navigate('MakeCollection')
+        }
+        title={"Make your own collection"}
+      />
+      <Button
+        backgroundColor="#00ADDC"
+        font="avenir"
+        buttonStyle = {
+          {
+            justifyContent:'center',
+            alignSelf:"center",
+            margin: 10
+          }
+        }
+        onPress={() =>
+          this.props.navigation.navigate('Login')
+        }
+        title={"Log in"}
+      />
+      <Button
+        backgroundColor="#00ADDC"
+        font="avenir"
+        buttonStyle = {
+          {
+            justifyContent:'center',
+            alignSelf:"center",
+            margin: 10
+          }
+        }
+        onPress={() =>
+          this.props.navigation.navigate('CreateUser')
+        }
+        title={"Create a new profile"}
+      />
+      <Button
+        backgroundColor="#00ADDC"
+        font="avenir"
+        buttonStyle = {
+          {
+            justifyContent:'center',
+            alignSelf:"center",
+            margin: 10
+          }
+        }
+        onPress={() =>
+          this.props.navigation.navigate('ProfileEditor')
+        }
+        title={"Make changes to your profile"}
+      />
 
       </View>
 
