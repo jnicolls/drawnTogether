@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import {Text, Button, View } from 'react-native';
+import {Text, View, Dimensions } from 'react-native';
+import {Button} from 'react-native-elements';
+import styles from "../../config/styles.js"
+
+const win = Dimensions.get('window');
 
 
 export default class CollectionOverview extends React.Component{
@@ -13,6 +17,14 @@ export default class CollectionOverview extends React.Component{
     return (
       <View>
 			<Button
+				backgroundColor="violet"
+				buttonStyle = {
+					{
+						flex:1,
+						width:win.width,
+						alignSelf:"left",
+					}
+				}
         onPress={() =>
           this.props.navigation.navigate('Collection', {collectionTitle: this.props.collectionTitle })
         }
