@@ -25,37 +25,17 @@ export default class HomeScreen extends React.Component {
           collectionTitle="Rejecting Anatomy"
           buttonTitle="Rejecting Anatomy"
   			/>
-        <Button
-  				backgroundColor="#00ADDC"
-          font="avenir"
-  				buttonStyle = {
-  					{
-  						flex:1,
-              justifyContent:'center',
-  						alignSelf:"center",
-              margin: 10
-  					}
-  				}
-          onPress={() =>
-            this.props.navigation.navigate('Collection', {collectionTitle: "Rejecting Anatomy" })
-          }
-  				title={"Rejecting Anatomy Revelations"}
+        <GeneralButton
+          destination="Collection"
+          navigation={this.props.navigation}
+          collectionTitle="Rejecting Anatomy"
+          buttonTitle="It's time for the anatomy to end."
   			/>
-        <Button
-  				backgroundColor="#00ADDC"
-          font="avenir"
-  				buttonStyle = {
-  					{
-  						flex:1,
-              justifyContent:'center',
-  						alignSelf:"center",
-              margin: 10,
-  					}
-  				}
-          onPress={() =>
-            this.props.navigation.navigate('Collection', {collectionTitle: "Rejecting Anatomy" })
-          }
-  				title={"Rejecting Anatomy Another One"}
+        <GeneralButton
+          destination="Collection"
+          navigation={this.props.navigation}
+          collectionTitle="Rejecting Anatomy"
+          buttonTitle="Anatomy Park: Revengance"
   			/>
       </ScrollView>
       </View>
