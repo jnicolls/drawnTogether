@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {Text, Button, View } from 'react-native';
+import {Text, View } from 'react-native';
+import {Button} from 'react-native-elements'
 
 
 export default class GeneralButton extends React.Component{
@@ -13,9 +14,19 @@ export default class GeneralButton extends React.Component{
     return (
       <View>
 			<Button
-        onPress={() =>
-          this.props.navigation.navigate(this.props.destination)
-        }
+				backgroundColor="#00ADDC"
+				font="avenir"
+				buttonStyle = {
+					{
+						flex:1,
+						justifyContent:'center',
+						alignSelf:"center",
+						margin: 10
+					}
+				}
+				onPress={() =>
+					this.props.navigation.navigate('Collection', {collectionTitle: this.props.collectionTitle })
+				}
 				title={this.props.buttonTitle}
 			/>
       </View>
