@@ -15,6 +15,9 @@ import IndividualImageScreen from "./screens/IndividualImage"
 import LoginScreen from "./screens/Login"
 import CreateUserScreen from "./screens/CreateUser"
 import ProfileEditingScreen from "./screens/ProfileEditing"
+import InboxScreen from "./screens/Inbox"
+import MessageOverviewScreen from "./screens/MessageOverview"
+import ConvoScreen from "./screens/Convo"
 import { Header } from 'react-native-elements';
 import firebase from 'firebase'; // 4.3.1
 
@@ -41,8 +44,8 @@ const GeneralNavigator  = StackNavigator({
 		    screen: LikedCollectionsScreen,
 		  },
 
-		  YourCollections: {
-		    screen: YourCollectionsScreen,
+		  Inbox: {
+		    screen: InboxScreen,
 		  },
 
 
@@ -96,6 +99,18 @@ const GeneralNavigator  = StackNavigator({
 
   ProfileEditor:{
     screen:ProfileEditingScreen
+  },
+
+  YourCollections:{
+    screen:YourCollectionsScreen
+  },
+
+  MessageOverview:{
+    screen:MessageOverviewScreen
+  },
+
+  Convo:{
+    screen:ConvoScreen
   },
 
 });
