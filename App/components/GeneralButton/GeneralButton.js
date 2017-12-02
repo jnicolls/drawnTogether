@@ -25,7 +25,7 @@ export default class GeneralButton extends React.Component{
 					}
 				}
 				onPress={() =>
-					this.props.navigation.navigate('Collection', {collectionTitle: this.props.collectionTitle })
+					this.props.navigation.navigate(this.props.destination, {props: this.props})
 				}
 				title={this.props.buttonTitle}
 			/>
