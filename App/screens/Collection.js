@@ -24,14 +24,16 @@ export default class CollectionsScreen extends React.Component {
 
   render() {
 
-    const{navigate} = this.props.navigation;
-
     return (
       <ScrollView style={styles.container} automaticallyAdjustContentInsets={false}>
         <Text style={[styles.title, styles.baseText]}>Rejecting Traditional Anatomy</Text>
-          <View style={styles.profileBar}>
-              <Image source={profilePhoto} style={{width:45, height:45, padding: 10}}/>
-              <Text style={[styles.curatorText, styles.baseText]}>Joseph Nicolls</Text>
+          <View style={styles.profileBar} navigation={this.props.navigation}>
+              <TouchableOpacity onPress={() =>
+              this.props.navigation.navigate('Profile', {})}>
+                  <Image source={profilePhoto} style={{width:45, height:45, padding: 10}}/>
+              </TouchableOpacity>
+              <Text style={[styles.curatorText, styles.baseText]} onPress={() =>
+              this.props.navigation.navigate('Profile', {})}>Joseph Nicolls</Text>
           </View>
 
         <Text style={[styles.margin, styles.baseText]}>An exploration of non-conventional forms and representations
