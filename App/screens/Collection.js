@@ -20,6 +20,7 @@ export default class CollectionsScreen extends React.Component {
         this.state = {
             dataSource: ds.cloneWithRows(data),
         };
+        console.log("COLLECTION: this.state.dataSource is ", this.state.dataSource);
     }
 
   render() {

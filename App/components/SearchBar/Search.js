@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import {Text, TextInput, View } from 'react-native';
+import { SearchBar } from 'react-native-elements'
 
 
-export default class SearchBar extends React.Component{
+export default class Search extends React.Component{
 
 	constructor(props) {
     super(props);

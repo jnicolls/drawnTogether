@@ -9,7 +9,6 @@ export default class FullScreen extends React.Component {
 
     constructor(props) {
         super(props);
-        console.log("FULLSCREEN: this.props is", props);
         console.log("FULLSCREEN params: ", this.props.navigation.state.params.uri);
     }
 
