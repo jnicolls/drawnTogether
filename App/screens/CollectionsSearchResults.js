@@ -13,6 +13,11 @@ export default class CollectionsSearchResultsScreen extends React.Component {
         return (
             <View style={styles.container}>
                 <Text> These are the collection search results for {this.props.navigation.state.params.searchQuery} </Text>
+                <Text>Total Results: 10</Text>
+
+                <View style="">
+                    <Text style={[styles.baseText]}>Collections</Text>
+                </View>
             </View>
         );
     }

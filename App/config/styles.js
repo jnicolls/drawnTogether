@@ -64,6 +64,7 @@ export default styles = StyleSheet.create({
     },
     baseText: {
         fontFamily: 'Avenir',
+
     },
     curatorText: {
         padding: 10,
