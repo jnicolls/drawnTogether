@@ -6,7 +6,7 @@ const win = Dimensions.get('window');
 export default styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#ffc1c1",
+        backgroundColor: "#183464",
         alignItems: 'center',
     },
     title: {
@@ -64,15 +64,63 @@ export default styles = StyleSheet.create({
     },
     baseText: {
         fontFamily: 'Avenir',
+        color: 'white',
+        fontSize: 18
     },
     curatorText: {
         padding: 10,
-        fontSize: 18
+        fontSize: 16
     },
     image: {
         flex: 1,
         alignSelf: 'stretch',
         height: win.height,
+    },
+    rightAlign: {
+
+    },
+    profilePhoto: {
+        width:80,
+        height:80,
+        paddingHorizontal: 15
+    },
+    profileName:{
+        fontWeight: 'bold',
+        fontSize: 20,
+    },
+    item2:{
+
+    },
+    leftAlign: {
+        textAlign: 'left',
+    },
+    profileContainer: {
+        flex: 1,
+        flexDirection: 'row',
+        marginTop: 10,
+        marginBottom: 10
+    },
+    profileDetailContainer: {
+        flex: 1,
+        flexDirection: 'row',
+        marginTop: 10,
+        marginBottom: 10
+    },
+    textPadding: {
+        paddingLeft: 15
+    },
+    bold: {
+        fontWeight: 'bold'
+    },
+    centeredHeading: {
+        textAlign: 'center',
+        fontWeight: 'bold'
+    },
+    topMargin: {
+        marginTop: 10
     }
+
+
+
 
 });

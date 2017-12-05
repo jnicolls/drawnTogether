@@ -30,7 +30,7 @@ export default class CollectionsScreen extends React.Component {
           <View style={styles.profileBar} navigation={this.props.navigation}>
               <TouchableOpacity onPress={() =>
               this.props.navigation.navigate('Profile', {})}>
-                  <Image source={profilePhoto} style={{width:45, height:45, padding: 10}}/>
+                  <Image source={profilePhoto} style={styles.profilePhoto}/>
               </TouchableOpacity>
               <Text style={[styles.curatorText, styles.baseText]} onPress={() =>
               this.props.navigation.navigate('Profile', {})}>Joseph Nicolls</Text>

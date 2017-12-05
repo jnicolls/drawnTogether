@@ -32,14 +32,14 @@ const GeneralNavigator  = StackNavigator({
 
 		  },
 
+        LikedCollections: {
+            screen: LikedCollectionsScreen,
+        },
+
 		  Profile: {
 		    screen: ProfileScreen,
 		  },
 
-
-		  LikedCollections: {
-		    screen: LikedCollectionsScreen,
-		  },
 
 		  YourCollections: {
 		    screen: YourCollectionsScreen,
