@@ -14,8 +14,9 @@ export default class SearchBar extends React.Component{
     return (
       <View style={{padding: 10}}>
 			<TextInput
-				style={{height: 40}}
+				style={[styles.baseText]}
 				placeholder="Search for Collections, Curators, etc."
+				placeholderTextColor='white'
 				onChangeText={(text) => this.setState({text})}
 				onSubmitEditing={() =>
 					this.props.navigation.navigate('SearchResults', {searchQuery: this.state.text })

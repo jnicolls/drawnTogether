@@ -29,17 +29,12 @@ const GeneralNavigator  = StackNavigator({
   	MyTab:{
 	  	screen: TabNavigator({
 
-
-		  Home: {
-		    screen: HomeScreen,
-
-		  },
-
-		  Profile: {
-		    screen: ProfileScreen,
-		  },
-
-
+		Home: {
+			screen: HomeScreen,
+		},
+		  YourCollections: {
+              screen: YourCollectionsScreen,
+          },
 		  LikedCollections: {
 		    screen: LikedCollectionsScreen,
 		  },
@@ -47,6 +42,9 @@ const GeneralNavigator  = StackNavigator({
 		  Inbox: {
 		    screen: InboxScreen,
 		  },
+            Profile: {
+		        screen: ProfileScreen,
+            },
 
 
 		}, {
