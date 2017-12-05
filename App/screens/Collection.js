@@ -3,6 +3,8 @@ import {StyleSheet, Text, View, Image, ListView, ScrollView, Dimensions, Touchab
 import styles from "../config/styles.js";
 import Row from './Row';
 
+
+
 const profilePhoto = require('./joseph.png');
 
 const data = [{title:"Starry Night", uri: 'https://news.artnet.com/app/news-upload/2015/08/martin-wong-Starry-Night.jpg',
@@ -28,7 +30,7 @@ export default class CollectionsScreen extends React.Component {
 
     return (
       <ScrollView style={styles.container} automaticallyAdjustContentInsets={false}>
-        <Text style={[styles.title, styles.baseText]}>Rejecting Traditional Anatomy</Text>
+        <Text style={[styles.title]}>Rejecting Traditional Anatomy</Text>
           <View style={styles.profileBar} navigation={this.props.navigation}>
               <TouchableOpacity onPress={() =>
               this.props.navigation.navigate('Profile', {})}>

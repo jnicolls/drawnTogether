@@ -1,10 +1,9 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import styles from "../config/styles.js"
-import CollectionGrid from "../components/PhotoGrid";
+import styles from "./styles.js"
+import CollectionGrid from "../PhotoGrid";
 
-
-export default class CollectionsSearchResultsScreen extends React.Component {
+export default class FilteredResults extends React.Component {
     static navigationOptions = {
         tabBarLabel: 'Collections',
     };

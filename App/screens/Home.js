@@ -5,6 +5,7 @@ import styles from "../config/styles";
 import Search from "../components/SearchBar"
 import CollectionOverview from "../components/CollectionOverview"
 import GeneralButton from "../components/GeneralButton"
+import CollectionGrid from "../components/PhotoGrid";
 
 const win = Dimensions.get('window');
 
@@ -19,6 +20,8 @@ export default class HomeScreen extends React.Component {
       <View style={styles.container}>
         <Search navigation={this.props.navigation} />
         <ScrollView>
+
+            <CollectionGrid/>
         <GeneralButton
           destination="Collection"
           navigation={this.props.navigation}

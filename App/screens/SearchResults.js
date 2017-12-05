@@ -5,6 +5,7 @@ import { TabNavigator } from 'react-navigation';
 import UsersSearchResultsScreen from "./UsersSearchResults";
 import CollectionsSearchResultsScreen from "./CollectionsSearchResults";
 import InterestsSearchResultsScreen from "./InterestsSearchResults";
+import FilteredResults from "../components/FilteredResults";
 
 export default class SearchResultsScreen extends React.Component {
   static navigationOptions = {
@@ -17,6 +18,7 @@ export default class SearchResultsScreen extends React.Component {
     return (
       <View style={{flex: 1}}>
         <Text> These are the search results for {this.props.navigation.state.params.searchQuery} </Text>
+          <FilteredResults></FilteredResults>
       </View>
     );
   }
