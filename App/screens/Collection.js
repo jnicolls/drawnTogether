@@ -23,6 +23,7 @@ export default class CollectionsScreen extends React.Component {
     }
 
   render() {
+      const { navigate } = this.props.navigation;
 
     return (
       <ScrollView style={styles.container} automaticallyAdjustContentInsets={false}>

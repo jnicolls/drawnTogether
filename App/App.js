@@ -42,6 +42,9 @@ const GeneralNavigator  = StackNavigator({
 		  Inbox: {
 		    screen: InboxScreen,
 		  },
+            Profile: {
+		        screen: ProfileScreen,
+            },
 
 
 		}, {
