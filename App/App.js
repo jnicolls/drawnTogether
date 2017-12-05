@@ -32,9 +32,6 @@ const GeneralNavigator  = StackNavigator({
 		Home: {
 			screen: HomeScreen,
 		},
-		  YourCollections: {
-              screen: YourCollectionsScreen,
-          },
 		  LikedCollections: {
 		    screen: LikedCollectionsScreen,
 		  },
@@ -110,6 +107,10 @@ const GeneralNavigator  = StackNavigator({
   Convo:{
     screen:ConvoScreen
   },
+
+    YourCollections: {
+        screen: YourCollectionsScreen,
+    },
 
 });
 
