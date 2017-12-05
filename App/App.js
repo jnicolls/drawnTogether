@@ -17,7 +17,7 @@ import CreateUserScreen from "./screens/CreateUser"
 import ProfileEditingScreen from "./screens/ProfileEditing"
 import { Header } from 'react-native-elements';
 import firebase from 'firebase'; // 4.3.1
-import UsersSearchResultsScreen from "./UsersSearchResults";
+import UsersSearchResultsScreen from "./screens/UsersSearchResults";
 import CollectionsSearchResultsScreen from "./screens/CollectionsSearchResults";
 import InterestsSearchResultsScreen from "./screens/InterestsSearchResults";
 
