@@ -1,6 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import styles from "../config/styles.js"
+import CollectionGrid from "../components/PhotoGrid";
 
 
 export default class LikedScreen extends React.Component {
@@ -11,6 +12,7 @@ export default class LikedScreen extends React.Component {
     return (
       <View style={styles.container}>
         <Text> This is the liked collections screen. </Text>
+        <CollectionGrid/>
       </View>
     );
   }

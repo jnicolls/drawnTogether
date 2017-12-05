@@ -6,11 +6,6 @@ import Image from 'react-native-scalable-image';
 
 const win = Dimensions.get('window');
 
-const details = [{detail:"The hands in the sky finger spell Starry Night.",
-    sourceTitle:"", sourceUri:""}, {detail:"[H]e grew up in San Francisco. His parents were Chinese-American, but because his father also had Mexican ancestry, Mr. Wong came to refer to himself as ethnically Chino-Latino",
-    sourceTitle:"New York Times",
-    sourceUri:"https://www.nytimes.com/2015/11/20/arts/design/martin-wong-an-urban-visionary-with-a-hungry-eye.html"}];
-
 export default class ExpandedInfoScreen extends React.Component {
     constructor(props) {
         super(props);

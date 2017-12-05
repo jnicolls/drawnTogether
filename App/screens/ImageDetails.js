@@ -11,6 +11,7 @@ export default class ImageDetails extends React.Component {
         console.log("ImageDetails params: ", this.props.navigation.state.params);
     }
     render() {
+
         return(
             <View style={{flex:1, flexDirection: 'column', justifyContent: 'center', alignItems: 'stretch', marginVertical: 10}}>
                 <View style={{height: 150, width: win.width-20, backgroundColor: 'steelblue', marginRight: 10,

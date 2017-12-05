@@ -11,9 +11,11 @@ export default styles = StyleSheet.create({
     },
     title: {
         fontWeight: 'bold',
-        fontSize: 30,
+        fontSize: 24,
         textAlign: 'center',
-        margin: 5
+        margin: 5,
+        fontFamily: 'Avenir',
+        color: 'white',
     },
     image: {
         alignSelf: 'stretch',
@@ -60,7 +62,8 @@ export default styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'flex-start'
+        justifyContent: 'flex-start',
+        marginTop: 20
     },
     baseText: {
         fontFamily: 'Avenir',
@@ -76,9 +79,6 @@ export default styles = StyleSheet.create({
         alignSelf: 'stretch',
         height: win.height,
     },
-    rightAlign: {
-
-    },
     profilePhoto: {
         width:80,
         height:80,
@@ -87,9 +87,6 @@ export default styles = StyleSheet.create({
     profileName:{
         fontWeight: 'bold',
         fontSize: 20,
-    },
-    item2:{
-
     },
     leftAlign: {
         textAlign: 'left',
@@ -118,9 +115,8 @@ export default styles = StyleSheet.create({
     },
     topMargin: {
         marginTop: 10
+    },
+    centerText: {
+        textAlign: 'center'
     }
-
-
-
-
 });

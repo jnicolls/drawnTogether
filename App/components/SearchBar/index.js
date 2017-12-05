@@ -1,3 +1,3 @@
-import SearchBar from "./SearchBar.js"
+import Search from "./Search.js"
 
-export default SearchBar
+export default Search

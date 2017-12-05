@@ -20,6 +20,9 @@ import MessageOverviewScreen from "./screens/MessageOverview"
 import ConvoScreen from "./screens/Convo"
 import { Header } from 'react-native-elements';
 import firebase from 'firebase'; // 4.3.1
+import UsersSearchResultsScreen from "./screens/UsersSearchResults";
+import CollectionsSearchResultsScreen from "./screens/CollectionsSearchResults";
+import InterestsSearchResultsScreen from "./screens/InterestsSearchResults";
 
 
 
@@ -32,9 +35,6 @@ const GeneralNavigator  = StackNavigator({
 		Home: {
 			screen: HomeScreen,
 		},
-		  YourCollections: {
-              screen: YourCollectionsScreen,
-          },
 		  LikedCollections: {
 		    screen: LikedCollectionsScreen,
 		  },
@@ -64,7 +64,25 @@ const GeneralNavigator  = StackNavigator({
   },
 
   SearchResults:{
-    screen: SearchResultsScreen,
+    screen: TabNavigator({
+            Collections: {
+                screen: CollectionsSearchResultsScreen,
+            },
+            Users: {
+                screen: UsersSearchResultsScreen,
+            },
+            Interests: {
+                screen: InterestsSearchResultsScreen,
+            }
+        }, {
+        tabBarPosition: 'top',
+        animationEnabled: false,
+        swipeEnabled: false,
+        lazy: true,
+        tabBarOptions: {
+            activeTintColor: '#e91e63',
+        }
+    }),
   },
 
   Collection:{
@@ -110,6 +128,10 @@ const GeneralNavigator  = StackNavigator({
   Convo:{
     screen:ConvoScreen
   },
+
+    YourCollections: {
+        screen: YourCollectionsScreen,
+    },
 
 });
 
