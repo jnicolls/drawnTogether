@@ -5,12 +5,14 @@ import styles from "../config/styles.js"
 
 export default class UsersSearchResultsScreen extends React.Component {
     static navigationOptions = {
-        tabBarLabel: 'Liked',
+        tabBarLabel: 'Users',
     };
     render() {
+
+        const{navigate} = this.props.navigation;
         return (
-            <View style={styles.container}>
-                <Text> This is the users search results screen. </Text>
+            <View style={{flex: 1}}>
+                <Text> These are the user search results for {this.props.navigation.state.params.searchQuery} </Text>
             </View>
         );
     }

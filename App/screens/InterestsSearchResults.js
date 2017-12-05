@@ -5,12 +5,14 @@ import styles from "../config/styles.js"
 
 export default class InterestsSearchResultsScreen extends React.Component {
     static navigationOptions = {
-        tabBarLabel: 'Liked',
+        tabBarLabel: 'Interests',
     };
     render() {
+
+        const{navigate} = this.props.navigation;
         return (
-            <View style={styles.container}>
-                <Text> This is the interests search results screen. </Text>
+            <View style={{flex: 1}}>
+                <Text> These are the interest search results for {this.props.navigation.state.params.searchQuery} </Text>
             </View>
         );
     }

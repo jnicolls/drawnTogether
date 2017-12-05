@@ -5,12 +5,14 @@ import styles from "../config/styles.js"
 
 export default class CollectionsSearchResultsScreen extends React.Component {
     static navigationOptions = {
-        tabBarLabel: 'Liked',
+        tabBarLabel: 'Collections',
     };
     render() {
+
+        const{navigate} = this.props.navigation;
         return (
-            <View style={styles.container}>
-                <Text> This is the collections search results screen. </Text>
+            <View style={{flex: 1}}>
+                <Text> These are the collection search results for {this.props.navigation.state.params.searchQuery} </Text>
             </View>
         );
     }

@@ -17,6 +17,9 @@ import CreateUserScreen from "./screens/CreateUser"
 import ProfileEditingScreen from "./screens/ProfileEditing"
 import { Header } from 'react-native-elements';
 import firebase from 'firebase'; // 4.3.1
+import UsersSearchResultsScreen from "./UsersSearchResults";
+import CollectionsSearchResultsScreen from "./screens/CollectionsSearchResults";
+import InterestsSearchResultsScreen from "./screens/InterestsSearchResults";
 
 
 
@@ -63,7 +66,25 @@ const GeneralNavigator  = StackNavigator({
   },
 
   SearchResults:{
-    screen: SearchResultsScreen,
+    screen: TabNavigator({
+            Collections: {
+                screen: CollectionsSearchResultsScreen,
+            },
+            Users: {
+                screen: UsersSearchResultsScreen,
+            },
+            Interests: {
+                screen: InterestsSearchResultsScreen,
+            }
+        }, {
+        tabBarPosition: 'top',
+        animationEnabled: false,
+        swipeEnabled: false,
+        lazy: true,
+        tabBarOptions: {
+            activeTintColor: '#e91e63',
+        }
+    }),
   },
 
   Collection:{

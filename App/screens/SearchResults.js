@@ -13,17 +13,16 @@ export default class SearchResultsScreen extends React.Component {
 
   render() {
 
-    const{navigate} = this.props.navigation
+    const{navigate} = this.props.navigation;
     return (
-      <View style={styles.container}>
+      <View style={{flex: 1}}>
         <Text> These are the search results for {this.props.navigation.state.params.searchQuery} </Text>
       </View>
     );
   }
 }
 
-
-const SearchTabs = TabNavigator({
+const SearchNavigator = TabNavigator({
     Collections: {
         screen: CollectionsSearchResultsScreen,
     },
@@ -35,10 +34,19 @@ const SearchTabs = TabNavigator({
     },
 }, {
     tabBarPosition: 'top',
-    animationEnabled: true,
+    animationEnabled: false,
+    swipeEnabled: false,
+    lazy: true,
     tabBarOptions: {
         activeTintColor: '#e91e63',
     },
 });
+
+SearchNavigator.navigationOptions = {
+    title: "Search example",
+    tabBar: {
+        label: 'SearchTest',
+    }
+};
 
 
