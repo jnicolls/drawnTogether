@@ -15,6 +15,9 @@ import IndividualImageScreen from "./screens/IndividualImage"
 import LoginScreen from "./screens/Login"
 import CreateUserScreen from "./screens/CreateUser"
 import ProfileEditingScreen from "./screens/ProfileEditing"
+import InboxScreen from "./screens/Inbox"
+import MessageOverviewScreen from "./screens/MessageOverview"
+import ConvoScreen from "./screens/Convo"
 import { Header } from 'react-native-elements';
 import firebase from 'firebase'; // 4.3.1
 import UsersSearchResultsScreen from "./screens/UsersSearchResults";
@@ -29,24 +32,19 @@ const GeneralNavigator  = StackNavigator({
   	MyTab:{
 	  	screen: TabNavigator({
 
-
-		  Home: {
-		    screen: HomeScreen,
-
-		  },
-
-		  Profile: {
-		    screen: ProfileScreen,
-		  },
-
-
+		Home: {
+			screen: HomeScreen,
+		},
 		  LikedCollections: {
 		    screen: LikedCollectionsScreen,
 		  },
 
-		  YourCollections: {
-		    screen: YourCollectionsScreen,
+		  Inbox: {
+		    screen: InboxScreen,
 		  },
+            Profile: {
+		        screen: ProfileScreen,
+            },
 
 
 		}, {
@@ -118,6 +116,22 @@ const GeneralNavigator  = StackNavigator({
   ProfileEditor:{
     screen:ProfileEditingScreen
   },
+
+  YourCollections:{
+    screen:YourCollectionsScreen
+  },
+
+  MessageOverview:{
+    screen:MessageOverviewScreen
+  },
+
+  Convo:{
+    screen:ConvoScreen
+  },
+
+    YourCollections: {
+        screen: YourCollectionsScreen,
+    },
 
 });
 
