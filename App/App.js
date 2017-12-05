@@ -29,6 +29,9 @@ const GeneralNavigator  = StackNavigator({
   	MyTab:{
 	  	screen: TabNavigator({
 
+		Home: {
+			screen: HomeScreen,
+		},
 		  YourCollections: {
               screen: YourCollectionsScreen,
           },
