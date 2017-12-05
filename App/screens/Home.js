@@ -4,6 +4,7 @@ import { Header, Button } from 'react-native-elements';
 import styles from "../config/styles";
 import SearchBar from "../components/SearchBar"
 import CollectionOverview from "../components/CollectionOverview"
+import GeneralButton from "../components/GeneralButton"
 
 const win = Dimensions.get('window');
 
@@ -18,53 +19,23 @@ export default class HomeScreen extends React.Component {
       <View style={styles.container}>
         <SearchBar navigation={this.props.navigation} />
         <ScrollView>
-        <Button
-  				backgroundColor="#00ADDC"
-          font="avenir"
-  				buttonStyle = {
-  					{
-  						flex:1,
-              justifyContent:'center',
-  						alignSelf:"center",
-              margin: 10
-  					}
-  				}
-          onPress={() =>
-            this.props.navigation.navigate('Collection', {collectionTitle: "Rejecting Anatomy" })
-          }
-  				title={"Rejecting Anatomy"}
+        <GeneralButton
+          destination="Collection"
+          navigation={this.props.navigation}
+          collectionTitle="Rejecting Anatomy"
+          buttonTitle="Rejecting Anatomy"
   			/>
-        <Button
-  				backgroundColor="#00ADDC"
-          font="avenir"
-  				buttonStyle = {
-  					{
-  						flex:1,
-              justifyContent:'center',
-  						alignSelf:"center",
-              margin: 10
-  					}
-  				}
-          onPress={() =>
-            this.props.navigation.navigate('Collection', {collectionTitle: "Rejecting Anatomy" })
-          }
-  				title={"Rejecting Anatomy Revelations"}
+        <GeneralButton
+          destination="Collection"
+          navigation={this.props.navigation}
+          collectionTitle="Rejecting Anatomy"
+          buttonTitle="It's time for the anatomy to end."
   			/>
-        <Button
-  				backgroundColor="#00ADDC"
-          font="avenir"
-  				buttonStyle = {
-  					{
-  						flex:1,
-              justifyContent:'center',
-  						alignSelf:"center",
-              margin: 10,
-  					}
-  				}
-          onPress={() =>
-            this.props.navigation.navigate('Collection', {collectionTitle: "Rejecting Anatomy" })
-          }
-  				title={"Rejecting Anatomy Another One"}
+        <GeneralButton
+          destination="Collection"
+          navigation={this.props.navigation}
+          collectionTitle="Rejecting Anatomy"
+          buttonTitle="Anatomy Park: Revengance"
   			/>
       </ScrollView>
       </View>
