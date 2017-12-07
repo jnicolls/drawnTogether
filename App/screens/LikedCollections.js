@@ -11,7 +11,7 @@ export default class LikedScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text> This is the liked collections screen. </Text>
+        <Text style={[styles.baseText, styles.title]}> Liked Collections </Text>
         <CollectionGrid/>
       </View>
     );

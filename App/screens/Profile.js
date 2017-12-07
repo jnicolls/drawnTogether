@@ -37,8 +37,8 @@ export default class ProfileScreen extends React.Component {
           </View>
           <View style={{width: (3*win.width)/4, height: 100}}>
             <Text style={[styles.baseText, styles.profileName, styles.textPadding]}>Joseph Nicolls</Text>
-            <Text style={[styles.baseText, styles.textPadding]}>User for X years</Text>
-            <Text style={[styles.baseText, styles.textPadding]}>Curated X digital collections</Text>
+            <Text style={[styles.baseText, styles.textPadding]}>User for 2 years</Text>
+            <Text style={[styles.baseText, styles.textPadding]}>Curated 1 digital collection</Text>
           </View>
         </View>
 
@@ -72,6 +72,21 @@ export default class ProfileScreen extends React.Component {
           <View style={{height: 20, backgroundColor: 'steelblue'}}/>
          <Text style={[styles.title, styles.baseText, styles.topMargin]}>Collections</Text>
 
+          <Button
+              backgroundColor="#1478eb"
+              font="avenir"
+              buttonStyle = {
+            {
+              justifyContent:'center',
+              alignSelf:"center",
+              margin: 10
+            }
+          }
+              onPress={() =>
+            this.props.navigation.navigate('MakeCollection')
+          }
+              title={"Make your own collection"}
+          />
 
         <View>
           <CollectionGrid/>
@@ -80,21 +95,7 @@ export default class ProfileScreen extends React.Component {
 
 
 
-        <Button
-          backgroundColor="#1478eb"
-          font="avenir"
-          buttonStyle = {
-            {
-              justifyContent:'center',
-              alignSelf:"center",
-              margin: 10
-            }
-          }
-          onPress={() =>
-            this.props.navigation.navigate('MakeCollection')
-          }
-          title={"Make your own collection"}
-        />
+
         <Button
           backgroundColor="#1478eb"
           font="avenir"

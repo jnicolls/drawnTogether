@@ -5,7 +5,7 @@ import Row from './Row';
 
 
 
-const profilePhoto = require('./joseph.png');
+const profilePhoto = 'http://web.stanford.edu/class/cs147/projects/education/drawtogether/assets/images/joseph.png';
 
 const data = [{title:"Starry Night", uri: 'https://news.artnet.com/app/news-upload/2015/08/martin-wong-Starry-Night.jpg',
     artist:"Martin Wong", year:"1982", medium:"Acrylic on canvas", details:[{detail:"The hands in the sky finger spell Starry Night",
