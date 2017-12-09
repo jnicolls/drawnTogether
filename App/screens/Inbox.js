@@ -1,19 +1,26 @@
 import React from 'react';
-import {StyleSheet, Text, TextInput, View} from 'react-native';
+import {StyleSheet, Text, TextInput, View, Image} from 'react-native';
 import styles from "../config/styles";
 import ChatBot from 'react-native-chatbot';
 import { ThemeProvider } from 'styled-components';
 
-const profileURL = 'http://web.stanford.edu/class/cs147/projects/education/drawtogether/assets/images/joseph.png'
+const profileURL = 'http://web.stanford.edu/class/cs147/projects/education/drawtogether/assets/images/melissa.png'
+const userURL = 'http://web.stanford.edu/class/cs147/projects/education/drawtogether/assets/images/joseph.png'
 
 export default class InboxScreen extends React.Component{
+
+    static navigationOptions = {
+        tabBarIcon: ({tintColor}) => (
+            <Image source={require('./inbox.png')} style={styles.icon}></Image>
+        )
+    }
 
   render() {
 
     const steps = [
           {
               id: '0',
-              message: 'Hi, I\'m Joseph! I\'m currently studying art history in college. What would you like to learn more about from me?',
+              message: 'Hi, I\'m Melissa! I\'m currently studying studio art in college. What would you like to learn more about from me? (Select an option below!)',
               trigger: '1',
           },
           {
@@ -73,7 +80,7 @@ export default class InboxScreen extends React.Component{
 
       return(
           <ThemeProvider theme={theme}>
-              <ChatBot botAvatar={profileURL} steps={steps}/>
+              <ChatBot botAvatar={profileURL} userAvatar={userURL} steps={steps}/>
           </ThemeProvider>
     );
   }

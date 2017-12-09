@@ -12,7 +12,7 @@ export default class InterestsSearchResultsScreen extends React.Component {
         const{navigate} = this.props.navigation;
         return (
             <View style={styles.container}>
-                <Text> These are the interest search results for {this.props.navigation.state.params.searchQuery} </Text>
+                <Text style={[styles.baseText, styles.margin]}> These are the interest search results for {this.props.navigation.state.params.searchQuery} </Text>
             </View>
         );
     }
