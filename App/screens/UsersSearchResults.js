@@ -12,7 +12,8 @@ export default class UsersSearchResultsScreen extends React.Component {
         const{navigate} = this.props.navigation;
         return (
             <View style={styles.container}>
-                <Text> These are the user search results for {this.props.navigation.state.params.searchQuery} </Text>
+                <Text style={[styles.baseText, styles.margin]}>
+                These are the user search results for {this.props.navigation.state.params.searchQuery} </Text>
             </View>
         );
     }

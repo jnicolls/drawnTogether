@@ -23,6 +23,7 @@ import firebase from 'firebase'; // 4.3.1
 import UsersSearchResultsScreen from "./screens/UsersSearchResults";
 import CollectionsSearchResultsScreen from "./screens/CollectionsSearchResults";
 import InterestsSearchResultsScreen from "./screens/InterestsSearchResults";
+import NewCollectionScreen from "./screens/NewCollection"
 
 
 
@@ -52,7 +53,7 @@ const GeneralNavigator  = StackNavigator({
 		  animationEnabled: true,
       barTintColor: "#fb5858",
 		  tabBarOptions: {
-		    activeTintColor: '#e91e63',
+		    activeTintColor: '#183464',
 		  },
 		}),
 
@@ -131,6 +132,10 @@ const GeneralNavigator  = StackNavigator({
 
     YourCollections: {
         screen: YourCollectionsScreen,
+    },
+
+    NewCollection: {
+  	    screen: NewCollectionScreen,
     },
 
 });

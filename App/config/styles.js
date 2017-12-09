@@ -68,7 +68,7 @@ export default styles = StyleSheet.create({
     baseText: {
         fontFamily: 'Avenir',
         color: 'white',
-        fontSize: 18
+        fontSize: 16
     },
     curatorText: {
         padding: 10,
@@ -118,5 +118,13 @@ export default styles = StyleSheet.create({
     },
     centerText: {
         textAlign: 'center'
+    },
+    marginBottom: {
+        marginBottom: 100
+    },
+    icon: {
+        width: 20,
+        height: 20,
+        tintColor: '#183464'
     }
 });
